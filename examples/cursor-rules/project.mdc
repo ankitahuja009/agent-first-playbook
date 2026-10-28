@@ -1,0 +1,25 @@
+---
+description: Project constitution. Conventions, traps and hard rules every change must follow.
+alwaysApply: true
+---
+
+# Project rules
+
+Read `docs/STATE.md` (last five entries) before starting. If this rule and the spec disagree, the spec wins: say so and stop.
+
+## Conventions
+- <language, framework, layout>
+- Dates: compute in the business time zone explicitly; store UTC, render local.
+
+## Traps
+- A write filtered by a permission policy returns success and changes nothing. Check the returned row count.
+- <your trap and its rule>
+
+## Never
+- Push to the production branch. Branch and open a PR.
+- Commit service or admin keys.
+- Report done without verifying against the running app.
+
+## Before finishing
+- `git status`; commit only your own files.
+- Append a dated line to `docs/STATE.md`.
